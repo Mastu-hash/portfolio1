@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+     .font-primary {
+       font-family: 'Roboto', sans-serif;
+     }
+   }
+/* width */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+  background: #1C1B22;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+  background: #00FF99;
+  border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+  background: #00FF99;
+  }
+
+
+ 

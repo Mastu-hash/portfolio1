@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="input.css" />
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+     <style>
+         /* Keyframe Animations */
+         @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+     </style>
+     
+    <title>Mastu Muhammed</title>
+  </head>
+
+  <body class="bg-[#1C1B22] font-primary text-white overflow-hidden">
+    <!-- navbar -->
+    <div class="bg-[#1C1B22] font-primary  text-white sticky top-0 shadow z-50">
+      <nav class="container flex items-center justify-between mx-auto p-4">
+        <!-- Brand Logo -->
+        <div class="text-lg font-bold cursor-pointer">
+          Muhammed <span class="text-2xl text-[#05FD9E]">.</span>
+        </div>
+
+        <!-- Navigation Links (Hidden on Mobile) -->
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a href="index.html" class="hover:text-[#05FD9E] transition hover:text-decoration-line:underline">Home</a>
+          </li>
+          <li>
+            <a href="service.html" class="hover:text-[#05FD9E] transition"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="resume.html" class="hover:text-[#05FD9E] transition">Resume</a>
+          </li>
+          <li>
+            <a href="work.html" class="hover:text-[#05FD9E] transition">Work</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-[#05FD9E] transition"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <!-- Hamburger Menu Icon (Visible on Mobile) -->
+        <div class="absolute right-3 md:hidden">
+          <button id="menu-btn" class="text-2xl focus:outline-none transition">
+            <span id="menu-icon">&#9776;</span>
+            <span id="cancel-icon" class="hidden">&times;</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-[#28272c] text-white ">
+        <ul class="space-y-4 p-4">
+          <li>
+            <a
+              href="index.html"
+              id="home-btn"
+              class="block hover:text-[#05FD9E] transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="service.html"
+              id="Services-btn"
+              class="block hover:text-[#05FD9E] transition"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="resume.html"
+              id="project-btn"
+              class="block hover:text-[#05FD9E] transition"
+              >Resume</a
+            >
+          </li>
+          <li>
+            <a
+              href="work.html"
+              id="project-btn"
+              class="block hover:text-[#05FD9E] transition"
+              >Work</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="block hover:text-[#05FD9E] transition"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <!-- Sections -->
+     <!-- home secton -->
+    <div
+      id="home"
+      class="text-center wrapper  h-screen md:flex md:flex-row-reverse md:text-left overflow-auto scrollbar-none"
+    >
+    
+      <img
+        src="assets/photo.png"
+        class=" h-1/3 box m-auto scroll-mt-16 my-10 md:w-96 md:h-96 object-contain border-2 border-[#05FD9E] border-dashed rounded-full md:mr-30 md:mt-10"
+        alt="image"
+      />
+     
+      <div class="h-1/2 md:w-1/2 md:pl-32 md:py-12 md:flex md:flex-col gap-8 md:gap-5 slide-in ">
+        <h3 class="text-xl font-semibold">Sotware Developer</h3>
+        <h1 class="text-3xl font-extrabold md:text-5xl">
+          Hello I'm <br /><span class="text-[#05FD9E]">Muhammed Mastu</span>
+        </h1>
+        <p class="text-lg py-2 px-4 md:px-0">
+          Hi! I'm a Frontend Web Developer and UI Designer dedicated to building
+          modern, user-centric websites. With proficiency in Figma and a knack
+          for design, I bridge the gap between functionality and aesthetics.
+        </p>
+        <button class="text-[#05FD9E] hover:text-white border border-[#05FD9E] hover:font-bold hover:bg-[#05FD9E] font-medium rounded-full text-sm px-5 py-2.5 text-center ">
+          Download CV
+        </button>
+
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6 mt-6">
+          <!-- GitHub -->
+          <a 
+            href="https://github.com/your-username" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-[#05FD9E] hover:scale-125 transform transition duration-300"
+            aria-label="GitHub"
+          >
+            <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.931 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.524.117-3.176 0 0 1.007-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.018.005 2.042.138 3.002.404 2.292-1.553 3.297-1.23 3.297-1.23.653 1.653.241 2.874.119 3.176.77.84 1.233 1.912 1.233 3.222 0 4.609-2.805 5.623-5.475 5.921.43.372.823 1.103.823 2.222 0 1.606-.015 2.898-.015 3.291 0 .32.192.694.801.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </a>
+        
+          <!-- Gmail -->
+          <a 
+            href="mailto:your-email@gmail.com" 
+            class="text-[#05FD9E] hover:scale-125 transform0 transition duration-300"
+            aria-label="Gmail"
+          >
+          <svg  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256" class="w-6 h-6">
+            <g fill="#05fd9e" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5.5,7c-2.46875,0 -4.48828,2.01563 -4.5,4.48438c0,0 0,0.00391 0,0.00781c0,0.00391 0,0.00391 0,0.00781v27c0,2.47266 2.02734,4.5 4.5,4.5h39c2.47266,0 4.5,-2.02734 4.5,-4.5v-27c0,-0.00391 0,-0.00391 0,-0.00781c0,-0.00391 0,-0.00781 0,-0.00781c-0.01172,-2.46875 -2.03125,-4.48437 -4.5,-4.48437zM8.10156,9h33.80078l-16.90234,11.78125zM4.77344,9.11719l20.22656,14.10156l20.23047,-14.10156c1.02344,0.30859 1.76172,1.23828 1.76953,2.37109c-0.00391,0.21094 -0.21875,0.63281 -0.53125,0.97266c-0.31641,0.34375 -0.625,0.55859 -0.625,0.55859l-0.00391,0.00781l-20.83984,14.75l-20.83984,-14.75l-0.00391,-0.00781c0,0 -0.30859,-0.21484 -0.625,-0.55859c-0.3125,-0.33984 -0.52734,-0.76172 -0.53125,-0.97266c0.00781,-1.13281 0.74609,-2.0625 1.77344,-2.37109zM3,14.65234l0.00781,0.00781l0.00781,0.00391v0.00391l2.98438,2.10938v24.22266h-0.5c-1.39062,0 -2.5,-1.10937 -2.5,-2.5zM47,14.65234v23.84766c0,1.39063 -1.10937,2.5 -2.5,2.5h-0.5v-24.22266l2.98438,-2.10937v-0.00391zM8,18.19141l17,12.03125l17,-12.03125v22.80859h-34z"></path></g></g>
+            </svg>
+           
+          </a>
+        
+          <!-- LinkedIn -->
+          <a 
+            href="https://linkedin.com/in/your-profile" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-[#05FD9E] hover:scale-125 transform transition duration-300"
+            aria-label="LinkedIn"
+          >
+            <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19.447 3H4.553C3.694 3 3 3.694 3 4.553v14.894C3 20.306 3.694 21 4.553 21h14.894c.859 0 1.553-.694 1.553-1.553V4.553C21 3.694 20.306 3 19.447 3zM8.847 18H6.35V9.706h2.497V18zm-1.247-9.39a1.448 1.448 0 110-2.895 1.448 1.448 0 010 2.895zM18 18h-2.497v-4.13c0-.984-.02-2.252-1.373-2.252-1.376 0-1.586 1.075-1.586 2.181V18H10.05V9.706h2.398v1.115h.034c.334-.634 1.152-1.302 2.372-1.302 2.538 0 3.006 1.672 3.006 3.845V18z"/>
+            </svg>
+          </a>
+        </div>
+        
+      
+      </div>
+    </div>
+   <script src="script.js"></script>
+  </body>
+</html>

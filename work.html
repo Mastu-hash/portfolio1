@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="input.css" />
+    <style>
+      /* Keyframe Animations */
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+              transform: translateY(10px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      @keyframes slideIn {
+          from {
+              transform: translateX(-100%);
+          }
+          to {
+              transform: translateX(0);
+          }
+      }
+
+      .fade-in {
+          animation: fadeIn 0.8s ease-in-out;
+      }
+
+      .slide-in {
+          animation: slideIn 0.5s ease-out;
+      }
+  </style>
+    <title>Work</title>
+  </head>
+  <body class="bg-[#1C1B22] font-primary text-white flex flex-col overflow-hidden">
+    <!-- Navigation -->
+    <div class="bg-[#1C1B22] font-primary text-white sticky top-0 shadow z-50">
+      <nav class="container flex items-center justify-between mx-auto p-4">
+        <!-- Brand Logo -->
+        <div class="text-lg font-bold cursor-pointer">
+          Muhammed <span class="text-2xl text-[#05FD9E]">.</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-[#05FD9E] transition">Home</a></li>
+          <li><a href="service.html" class="hover:text-[#05FD9E] transition">Services</a></li>
+          <li><a href="resume.html" class="hover:text-[#05FD9E] transition">Resume</a></li>
+          <li><a href="work.html" class="hover:text-[#05FD9E] transition">Work</a></li>
+          <li><a href="contact.html" class="hover:text-[#05FD9E] transition">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Menu Icon (Mobile) -->
+        <div class="absolute right-3 md:hidden">
+          <button id="menu-btn" class="text-2xl focus:outline-none transition">
+            <span id="menu-icon">&#9776;</span>
+            <span id="cancel-icon" class="hidden">&times;</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-[#28272c] text-white">
+        <ul class="space-y-4 p-4">
+          <li><a href="index.html" class="block hover:text-[#05FD9E] transition">Home</a></li>
+          <li><a href="service.html" class="block hover:text-[#05FD9E] transition">Services</a></li>
+          <li><a href="resume.html" class="block hover:text-[#05FD9E] transition">Resume</a></li>
+          <li><a href="work.html" class="block hover:text-[#05FD9E] transition">Work</a></li>
+          <li><a href="contact.html" class="block hover:text-[#05FD9E] transition">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+ <!-- Main Container -->
+ <div class="flex justify-center items-center min-h-screen px-4">
+  <div class="relative w-full max-w-5xl p-6 bg-gray-800 rounded-lg shadow-lg">
+      <!-- Content Section -->
+      <div class="flex flex-col md:flex-row items-center gap-6">
+          <!-- Project Content -->
+          <div class="md:w-1/2 text-center md:text-left">
+              <p class="text-4xl font-bold text-green-400" id="projectNumber">01</p>
+              <h1 class="text-3xl font-semibold mb-4" id="projectTitle">Frontend Project</h1>
+              <p class="text-gray-300 mb-4" id="projectDesc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.
+              </p>
+              <p class="text-green-400 font-semibold mb-6" id="projectTech">Html 5, Css 3, Javascript</p>
+
+              <!-- Buttons -->
+              <div class="flex gap-4 justify-center md:justify-start">
+                  <a href="#" id="livePreview" target="_blank" class="bg-green-500 hover:bg-green-400 text-white px-4 py-2 rounded-lg shadow">
+                      Live Preview
+                  </a>
+                  <a href="#" id="githubCode" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg shadow">
+                      GitHub Code
+                  </a>
+              </div>
+          </div>
+
+          <!-- Project Image -->
+          <div class="md:w-1/2">
+              <img id="projectImage" src="https://via.placeholder.com/400x250" 
+                  alt="Project Image" 
+                  class="rounded-lg shadow-lg w-full object-cover">
+          </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button id="leftArrow" 
+          class="absolute md:-left-16 left-2 top-1/2 transform -translate-y-1/2 bg-green-500 hover:bg-green-400 text-white px-4 py-2 rounded-full shadow">
+          &larr;
+      </button>
+      <button id="rightArrow" 
+          class="absolute md:-right-16 right-2 top-1/2 transform -translate-y-1/2 bg-green-500 hover:bg-green-400 text-white px-4 py-2 rounded-full shadow">
+          &rarr;
+      </button>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  // Project data
+  const projects = [
+      {
+          number: "01",
+          title: "Frontend Project",
+          description: "Creative frontend designs using modern tools and frameworks.",
+          tech: "Html 5, Css 3, Javascript",
+          image: "https://via.placeholder.com/400x250",
+          live: "#",
+          github: "#"
+      },
+      {
+          number: "02",
+          title: "Backend Project",
+          description: "Building powerful servers with Node.js and Express.",
+          tech: "Node.js, Express, MongoDB",
+          image: "https://via.placeholder.com/400x250/111/eee",
+          live: "#",
+          github: "#"
+      },
+      {
+          number: "03",
+          title: "UI/UX Design",
+          description: "Designing clean and engaging user interfaces with Figma.",
+          tech: "Figma, Adobe XD",
+          image: "https://via.placeholder.com/400x250/222/ccc",
+          live: "#",
+          github: "#"
+      }
+  ];
+
+  let currentIndex = 0;
+
+  // DOM Elements
+  const projectNumber = document.getElementById("projectNumber");
+  const projectTitle = document.getElementById("projectTitle");
+  const projectDesc = document.getElementById("projectDesc");
+  const projectTech = document.getElementById("projectTech");
+  const projectImage = document.getElementById("projectImage");
+  const livePreview = document.getElementById("livePreview");
+  const githubCode = document.getElementById("githubCode");
+
+  const leftArrow = document.getElementById("leftArrow");
+  const rightArrow = document.getElementById("rightArrow");
+
+  // Function to update content
+  function updateProject(index) {
+      projectNumber.textContent = projects[index].number;
+      projectTitle.textContent = projects[index].title;
+      projectDesc.textContent = projects[index].description;
+      projectTech.textContent = projects[index].tech;
+      projectImage.src = projects[index].image;
+      livePreview.href = projects[index].live;
+      githubCode.href = projects[index].github;
+  }
+
+  // Event Listeners
+  leftArrow.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+      updateProject(currentIndex);
+  });
+
+  rightArrow.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % projects.length;
+      updateProject(currentIndex);
+  });
+
+  // Initialize the first project
+  updateProject(currentIndex);
+</script>
+    <script src="script.js"></script>
+  </body>
+</html>

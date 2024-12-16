@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="input.css" />
+    <style>
+      /* Keyframe Animations */
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+              transform: translateY(10px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      @keyframes slideIn {
+          from {
+              transform: translateX(-100%);
+          }
+          to {
+              transform: translateX(0);
+          }
+      }
+
+      .fade-in {
+          animation: fadeIn 0.8s ease-in-out;
+      }
+
+      .slide-in {
+          animation: slideIn 0.5s ease-out;
+      }
+  </style>
+    <title>Document</title>
+  </head>
+  <body class="bg-[#1C1B22] font-primary text-white flex flex-col overflow-hidden">
+    <!-- Navigation -->
+    <div class="bg-[#1C1B22] font-primary text-white sticky top-0 shadow z-50">
+      <nav class="container flex items-center justify-between mx-auto p-4">
+        <!-- Brand Logo -->
+        <div class="text-lg font-bold cursor-pointer">
+          Muhammed <span class="text-2xl text-[#05FD9E]">.</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-[#05FD9E] transition">Home</a></li>
+          <li><a href="service.html" class="hover:text-[#05FD9E] transition">Services</a></li>
+          <li><a href="resume.html" class="hover:text-[#05FD9E] transition">Resume</a></li>
+          <li><a href="work.html" class="hover:text-[#05FD9E] transition">Work</a></li>
+          <li><a href="contact.html" class="hover:text-[#05FD9E] transition">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Menu Icon (Mobile) -->
+        <div class="absolute right-3 md:hidden">
+          <button id="menu-btn" class="text-2xl focus:outline-none transition">
+            <span id="menu-icon">&#9776;</span>
+            <span id="cancel-icon" class="hidden">&times;</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-[#28272c] text-white">
+        <ul class="space-y-4 p-4">
+          <li><a href="index.html" class="block hover:text-[#05FD9E] transition">Home</a></li>
+          <li><a href="service.html" class="block hover:text-[#05FD9E] transition">Services</a></li>
+          <li><a href="resume.html" class="block hover:text-[#05FD9E] transition">Resume</a></li>
+          <li><a href="work.html" class="block hover:text-[#05FD9E] transition">Work</a></li>
+          <li><a href="contact.html" class="block hover:text-[#05FD9E] transition">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div
+      id="Services"
+      class="h-screen bg-red-30 mt-20 gap-10 mx-5 md:px-32 md:py-12 flex flex-col md:flex-row md:gap-8 overflow-hidden "
+    >
+      <!-- Left Section -->
+      <div class="flex flex-col gap-4 md:w-1/2 bg-[#2c2b32] h-fit p-4 rounded-lg " >
+        <div class="group ">
+          <div class="flex justify-between items-center ">
+            <h1 class="text-5xl text-[#05FD9E] group-hover:text-white">01</h1>
+            <div
+              class="bg-white rounded-full h-12 transform duration-150 w-12 relative mx-3 rotate-45 group-hover:bg-[#05FD9E] group-hover:rotate-0"
+            >
+              <img
+                class="absolute top-3 left-3"
+                src="assets/east_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="text-4xl my-4 group-hover:text-[#05FD9E]">Web Development</div>
+        </div>
+        <p class="text-xl text-[#95949B]">
+          I believe in merging creativity with technology. By leveraging modern web development tools and practices, I build digital solutions that captivate and perform.
+        </p>
+      </div>
+
+      <!-- Right Section -->
+      <div class="flex flex-col gap-4 md:w-1/2 bg-[#2c2b32] h-fit p-4 rounded-lg ">
+        <div class="group">
+          <div class="flex justify-between items-center">
+            <h1 class="text-5xl text-[#05FD9E] group-hover:text-white">02</h1>
+            <div
+              class="bg-white rounded-full h-12 transform duration-150 w-12 relative mx-3 rotate-45 group-hover:bg-[#05FD9E] group-hover:rotate-0"
+            >
+              <img
+                class="absolute top-3 left-3"
+                src="assets/east_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="text-4xl my-4 group-hover:text-[#05FD9E]">UI Design</div>
+        </div>
+        <p class="text-xl text-[#95949B]">
+          I thrive on transforming complex ideas into simple, elegant, and responsive designs. My goal is to bridge the gap between users and technology through intuitive interfaces.
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

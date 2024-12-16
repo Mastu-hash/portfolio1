@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="input.css" />
+    <style>
+      /* Ensure no scrollbars on the page */
+      html, body {
+        height: 100%;
+        margin: 0;
+        /* overflow: hidden; */
+        scroll-behavior: smooth; /* Smooth scrolling for links */
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+      .dot {
+        animation: bounce 1.2s infinite;
+      }
+      .dot:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .dot:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .fade-in {
+        animation: fadeIn 1s ease-out forwards;
+      }
+
+
+
+
+
+
+    </style>
+    <title>Portfolio - Muhammed</title>
+    <meta name="description" content="Portfolio website showcasing Muhammed's skills, services, and contact information." />
+  </head>
+  <body class="bg-[#1C1B22] font-primary text-white h-screen">
+    <div class="bg-[#1C1B22] font-primary text-white sticky top-0 shadow z-50">
+      <nav class="container flex items-center justify-between mx-auto p-4">
+        <!-- Brand Logo -->
+        <div class="text-lg font-bold cursor-pointer">
+          Muhammed <span class="text-2xl text-[#05FD9E]">.</span>
+        </div>
+
+        <!-- Navigation Links (Hidden on Mobile) -->
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a href="index.html" class="hover:text-[#05FD9E] ">Home</a>
+          </li>
+          <li>
+            <a href="service.html" class="hover:text-[#05FD9E] ">Services</a>
+          </li>
+          <li>
+            <a href="resume.html" class="hover:text-[#05FD9E] ">Resume</a>
+          </li>
+          <li>
+            <a href="work.html" class="hover:text-[#05FD9E] ">Work</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-[#05FD9E] ">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Hamburger Menu Icon (Visible on Mobile) -->
+        <div class="absolute right-3 md:hidden">
+          <button id="menu-btn" class="text-2xl focus:outline-none transition">
+            <span id="menu-icon">&#9776;</span>
+            <span id="cancel-icon" class="hidden">&times;</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-[#28272c] text-white">
+        <ul class="space-y-4 p-4">
+          <li>
+            <a href="index.html" id="home-btn" class="block hover:text-[#05FD9E] transition">Home</a>
+          </li>
+          <li>
+            <a href="service.html" id="services-btn" class="block hover:text-[#05FD9E] transition">Services</a>
+          </li>
+          <li>
+            <a href="resume.html" id="resume-btn" class="block hover:text-[#05FD9E] transition">Resume</a>
+          </li>
+          <li>
+            <a href="work.html" id="work-btn" class="block hover:text-[#05FD9E] transition">Work</a>
+          </li>
+          <li>
+            <a href="contact.html" class="block hover:text-[#05FD9E] transition">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Loading Animation -->
+    <!-- <div
+    id="spinner"
+    class="fixed inset-0 flex items-center justify-center bg-[#1C1B22] z-50"
+  >
+    <div class="flex space-x-4">
+      <div class="dot h-4 w-4 bg-[#05FD9E] rounded-full"></div>
+      <div class="dot h-4 w-4 bg-[#05FD9E] rounded-full"></div>
+      <div class="dot h-4 w-4 bg-[#05FD9E] rounded-full"></div>
+    </div>
+  </div> -->
+
+
+ 
+
+
+    <div
+      id="Contact"
+      class="content opacity-0 p-8 fade-in h-screen mx-5 md:px-32 md:py-8 flex flex-col gap-4 md:flex-row md:gap-8"
+    >
+
+    
+      <!-- Contact Form -->
+       
+      <div class="flex-col bg-[#28272C] rounded-lg md:w-1/2 p-4 space-y-6">
+        <div>
+          <h2 class="text-3xl text-[#05FD9E]">Let's work together</h2>
+          <p class="text-[#95949B]">
+            Let's collaborate to bring your ideas to life. Share your details, and I'll get back to you promptly!
+          </p>
+        </div>
+        <div >
+          <form action="" class="flex flex-col gap-4" name="contact-form">
+
+            <input type="text" name="firstname" required class="bg-[#1C1B22] text-[#95949B] outline-[#05FD9E] p-2 rounded-md pl-3" placeholder="Enter your name" aria-label="First Name" />
+            <input type="email" name="email" required class="bg-[#1C1B22] text-[#95949B] outline-[#05FD9E] p-2 rounded-md pl-3" placeholder="Enter your email" aria-label="Email Address" />
+            <input type="text" name="phonenumber" required class="bg-[#1C1B22] text-[#95949B] outline-[#05FD9E] p-2 rounded-md pl-3" placeholder="Enter your phone number" aria-label="Phone Number" />
+            
+            
+            <!-- <select name="service" required class="bg-[#1C1B22] text-[#95949B] outline-[#05FD9E] p-2 rounded-md pl-3" aria-label="Select Service">
+              <option value="" disabled selected>Select a service</option>
+              <option value="web-development">Web Development</option>
+              <option value="ui-design">UI Design</option>
+            </select> -->
+            
+            <textarea name="message" rows="3" required class="bg-[#1C1B22] text-[#95949B] outline-[#05FD9E] p-2 rounded-md pl-3" placeholder="Type your message here" aria-label="Message"></textarea>
+          </div>
+          <button class="bg-[#05FD9E] hover:bg-[#05fd9ec4] hover:font-extrabold text-[#28272C] w-fit px-6 py-2 rounded-full cursor-pointer">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="flex flex-col gap-6 justify-center">
+        <div class="flex gap-6 items-center">
+          <div class="bg-[#28272C] rounded-lg p-2">
+            <img src="assets/icons8-phone-50.png" class="md:h-10 h-6" alt="Phone icon" />
+          </div>
+          <div>
+            <p class="text-[#95949B]">Phone</p>
+            <p>(+91) 9054991966</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-center">
+          <div class="bg-[#28272C] rounded-lg p-2">
+            <img src="assets/icons8-email-48.png" class="md:h-10 h-6" alt="Email icon" />
+          </div>
+          <div>
+            <p class="text-[#95949B]">Email</p>
+            <p>muhammedmastu123@gmail.com</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-center">
+          <div class="bg-[#28272C] rounded-lg p-2">
+            <img src="assets/icons8-location-50.png" class="md:h-10 h-6" alt="Location icon" />
+          </div>
+          <div>
+            <p class="text-[#95949B]">Address</p>
+            <p>Bharuch, Gujarat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="form.js"></script>
+    <script>
+      setTimeout(function () {
+  document.getElementById("spinner").style.display = "none";
+  document.querySelector(".content").style.opacity = "1";
+}, 1500);
+
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

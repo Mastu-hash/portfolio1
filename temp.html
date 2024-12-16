@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Project Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Full Container -->
+    <div class="flex justify-center items-center min-h-screen px-4 lg:px-0">
+        <!-- Card Container -->
+        <div class="relative w-full max-w-4xl bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+            <!-- Project Content Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <!-- Text Content -->
+                <div class="p-6 lg:p-12 flex flex-col justify-center">
+                    <p id="projectNumber" class="text-4xl font-bold text-green-400 mb-4">01</p>
+                    <h1 id="projectTitle" class="text-3xl lg:text-4xl font-extrabold mb-4 leading-tight">
+                        Frontend Project
+                    </h1>
+                    <p id="projectDesc" class="text-gray-400 mb-6 text-sm lg:text-base leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.
+                    </p>
+                    <p id="projectTech" class="text-green-400 font-semibold text-sm lg:text-base">
+                        Html 5, Css 3, Javascript
+                    </p>
+                </div>
+                
+                <!-- Image Section -->
+                <div class="relative h-56 lg:h-full">
+                    <img id="projectImage" src="https://via.placeholder.com/800x400" 
+                        alt="Project Image" 
+                        class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10">
+            <!-- Navigation Buttons -->
+                   <button id="leftArrow" 
+                   class=" left-2  transform -translate-y-1/2 bg-green-500 hover:bg-green-400 text-gray-900 px-4 py-2 lg:px-6 lg:py-3 rounded-full shadow-lg transition duration-300">
+                   &larr;
+               </button>
+               <button id="rightArrow" 
+               class=" right-2  transform -translate-y-1/2 bg-green-500 hover:bg-green-400 text-gray-900 px-4 py-2 lg:px-6 lg:py-3 rounded-full shadow-lg transition duration-300">
+               &rarr;
+           </button>
+    </div>
+    
+</div>
+
+    <!-- JavaScript -->
+    <script>
+        // Project data
+        const projects = [
+            {
+                number: "01",
+                title: "Frontend Project",
+                description: "Build responsive web designs with HTML, CSS, and JavaScript.",
+                tech: "Html 5, Css 3, Javascript",
+                image: "https://via.placeholder.com/800x400"
+            },
+            {
+                number: "02",
+                title: "Backend Project",
+                description: "Develop robust APIs using Node.js and Express.",
+                tech: "Node.js, Express, MongoDB",
+                image: "https://via.placeholder.com/800x400/111/eee"
+            },
+            {
+                number: "03",
+                title: "UI/UX Design",
+                description: "Design user-friendly interfaces and prototypes with Figma.",
+                tech: "Figma, Adobe XD",
+                image: "https://via.placeholder.com/800x400/222/ccc"
+            }
+        ];
+
+        let currentIndex = 0;
+
+        // DOM Elements
+        const projectNumber = document.getElementById("projectNumber");
+        const projectTitle = document.getElementById("projectTitle");
+        const projectDesc = document.getElementById("projectDesc");
+        const projectTech = document.getElementById("projectTech");
+        const projectImage = document.getElementById("projectImage");
+
+        const leftArrow = document.getElementById("leftArrow");
+        const rightArrow = document.getElementById("rightArrow");
+
+        // Function to update content
+        function updateProject(index) {
+            projectNumber.textContent = projects[index].number;
+            projectTitle.textContent = projects[index].title;
+            projectDesc.textContent = projects[index].description;
+            projectTech.textContent = projects[index].tech;
+            projectImage.src = projects[index].image;
+        }
+
+        // Event Listeners for arrows
+        leftArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+            updateProject(currentIndex);
+        });
+
+        rightArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % projects.length;
+            updateProject(currentIndex);
+        });
+
+        // Initialize with the first project
+        updateProject(currentIndex);
+    </script>
+</body>
+</html>
